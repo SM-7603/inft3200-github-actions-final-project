@@ -111,10 +111,21 @@ Add these GitHub secrets to your repository:
 
 ![architecture_diagram](final_project_diagram.png)
 
+## GitHub Secrets
+
+To securely deploy the application to AWS ECS via GitHub Actions, the following secrets are configured under **GitHub Repository -> Settings -> Secrets & variables -> Actions**:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_SESSION_TOKEN` 
+
+These secrets are injected into the workflow at runtime to authenticate securely with AWS. The deployment process leverages these values to push Docker images to Amazon ECR and update ECS services.
+
 ## Notes
 
 - This repository does not contain production .env files.
 - Task definitions use ${VARIABLE} style values as placeholders, aligned with GitHub Actions usage.
-- Actual deployment is demonstrated in the video presentation.
+- The secrets are configured under "secrets & variables".
+- The working application and infrastructure setup are demonstrated in the video presentation.
 
 ---
