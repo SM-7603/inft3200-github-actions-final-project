@@ -1,0 +1,29 @@
+# Ignore node modules (frontend)
+frontend/node_modules/
+**/node_modules/
+
+# Python cache & virtual envs (backend)
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+*.env.*
+
+# Next.js build
+frontend/.next/
+frontend/out/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+**/.dockerignore
+
+# OS files
+.DS_Store
+Thumbs.db
